@@ -1,44 +1,89 @@
-# GROM Exchange
+<p align="center">
+  <a href="https://grom.exchange"><img src="https://raw.githubusercontent.com/grom-exchange/brand-kit/main/logos/grom-mark-nord-bg-256.png" width="96" alt="GROM"></a>
+</p>
 
-[![GROM](https://grom.exchange/assets/grom-mark-nord.png)](https://grom.exchange/)
+<h1 align="center">GROM Exchange — docs</h1>
 
-**A non-custodial DeFi interface for swaps, trading, prediction markets and tokenized stocks.**
+<p align="center">How GROM works, what it supports and where to find official links.</p>
 
-[Open GROM Exchange](https://grom.exchange/) · [Swap](https://grom.exchange/swap) · [Trade](https://grom.exchange/futures) · [Markets](https://grom.exchange/markets)
+<p align="center">
+  <a href="https://grom.exchange"><b>Launch app</b></a> ·
+  <a href="#getting-started">Getting started</a> ·
+  <a href="#swaps-and-cross-chain-routes">Swaps</a> ·
+  <a href="#fees">Fees</a> ·
+  <a href="#faq">FAQ</a> ·
+  <a href="#official-links">Official links</a>
+</p>
 
-This is GROM's public project overview for users, ecosystem directories and integration partners. It contains product documentation and links to the live application.
+---
 
-## Products
+## What GROM is
+
+GROM is a non-custodial DeFi hub. One interface for:
 
 | Product | What it does | Open |
 | --- | --- | --- |
-| Instant Swap | Compare available token exchange routes, including supported cross-chain routes. | [Swap](https://grom.exchange/swap) |
-| Trade | Access Hyperliquid spot and perpetual markets through a wallet-connected interface. | [Trade](https://grom.exchange/futures) |
-| Markets | Explore market prices and supported trading instruments. | [Markets](https://grom.exchange/markets) |
-| Prediction markets | Explore event markets and their available trading routes. | [Predictions](https://grom.exchange/predict) |
-| Tokenized stocks | Explore supported tokenized equity instruments and purchase routes. | [Stocks](https://grom.exchange/stocks) |
+| Swap & bridge | Swap tokens on one network or across networks; GROM compares routes from several aggregators | [Swap](https://grom.exchange/swap) |
+| Trade | Perpetual futures from a connected wallet | [Trade](https://grom.exchange/futures) |
+| Predictions | Event markets | [Predictions](https://grom.exchange/predict) |
+| Stocks | Tokenized stocks and ETFs bought on-chain | [Stocks](https://grom.exchange/stocks) |
+| Markets | Live prices, trending DEX tokens, new listings | [Markets](https://grom.exchange/markets) |
 
-## Wallet and transaction flow
+You keep custody the whole time: there is no account, no sign-up and no deposit.
 
-Connect a compatible wallet, choose a product and review the amount, network, destination and quoted costs. Transaction signatures are requested in the user's wallet. Availability depends on the selected assets, network and upstream provider.
+## Getting started
 
-Cross-chain transactions can have separate source and destination stages. A submitted transaction is not the same as a completed destination transfer; use the transaction and route status to check settlement.
+1. Open [grom.exchange](https://grom.exchange) and press **Connect wallet**. Browser-extension wallets and WalletConnect are supported; Solana wallets work for Solana routes.
+2. Choose a product — for example **Swap**.
+3. Pick the token you pay with and the token you want, on any supported network.
+4. Review the quote: route, fees, network gas and the minimum you receive.
+5. Confirm in your wallet. Only you can sign.
 
-## Networks and integrations
+Every coin also has its own page, e.g. [grom.exchange/token/pepe](https://grom.exchange/token/pepe), that opens the swap with that coin selected.
 
-GROM supports routes on BNB Smart Chain and other supported EVM networks, with Solana routes where available. Its live swap configuration includes LI.FI, ParaSwap, Kyber, Squid and Jupiter integrations. A configured provider does not guarantee a route for every pair or amount.
+## Swaps and cross-chain routes
 
-The current public configuration is available at [grom.exchange/api/swap/public-config](https://grom.exchange/api/swap/public-config). The application quote is the reference for the selected route, fees and estimated output. Network gas and provider fees can differ between routes.
+- GROM requests quotes from **LI.FI, Velora (ParaSwap), KyberSwap, Squid** and **Jupiter** (Solana) and shows the available route for your pair and amount.
+- A cross-chain swap has two stages: the source-chain transaction you sign, and delivery on the destination chain. A submitted transaction is not yet a completed transfer — the route status in the app shows when funds have arrived.
+- A configured provider does not guarantee a route for every pair, network or amount. The in-app quote is the reference.
 
-Wallet connections use WalletConnect SignClient and supported injected wallets. Trading integrations and product availability may change as providers and networks evolve.
+Supported networks include Ethereum, BNB Chain, Base, Arbitrum, Optimism, Polygon, Avalanche, Linea, Solana, Robinhood Chain, HyperEVM, Monad, Plasma and X Layer. Availability per product can differ.
 
-## Links
+## Fees
 
-- Website: [grom.exchange](https://grom.exchange/)
-- Russian landing page: [grom.exchange/ru/](https://grom.exchange/ru/)
-- Brand mark: [GROM PNG](https://grom.exchange/assets/grom-mark-nord.png)
-- Public project information: [this repository](https://github.com/gevo771-hue/grom-exchange-public)
+- Each quote shows the GROM fee, provider fees, network gas and the expected output **before** you sign.
+- Fees differ by route and provider; Solana swaps via Jupiter currently carry no GROM fee.
+- The live swap configuration is public: [grom.exchange/api/swap/public-config](https://grom.exchange/api/swap/public-config).
+
+## Safety
+
+- GROM never asks for a seed phrase, private key or password, and never asks you to send funds to "verify" a wallet.
+- Check the domain is `grom.exchange` before connecting.
+- Read what your wallet asks you to sign: network, token, amount and recipient.
+- Crypto assets — especially meme coins — are volatile and can lose most of their value. Nothing in GROM is investment advice.
+
+## FAQ
+
+**Do I need an account or KYC?**
+No account is needed on GROM — you connect a wallet and sign. Third-party services and some regions may apply their own checks.
+
+**Where are my funds?**
+In your wallet. GROM routes your transaction to the chosen provider; it does not keep a balance for you.
+
+**Why did a cross-chain swap not arrive yet?**
+Delivery on the destination chain can take from seconds to several minutes depending on the route. Check the route status in the app and the destination-chain explorer.
+
+**Which wallet should I use?**
+Any wallet that supports the network you trade on — browser extensions, mobile wallets through WalletConnect, and Solana wallets for Solana routes.
+
+## Official links
+
+- App: [grom.exchange](https://grom.exchange)
+- X: [@GromExchange](https://x.com/GromExchange)
+- Telegram: [t.me/Grom_DeFi](https://t.me/Grom_DeFi)
+- GitHub: [github.com/grom-exchange](https://github.com/grom-exchange)
+- Brand kit: [grom-exchange/brand-kit](https://github.com/grom-exchange/brand-kit)
 
 ## Feedback
 
-Use this repository's Issues for public documentation corrections and reproducible interface reports. Include the page, browser, network and steps to reproduce. Never include a seed phrase, private key or authentication token.
+Spotted a mistake in these docs or a reproducible interface problem? Open an issue with the page, browser, network and steps to reproduce. **Never include a seed phrase, private key or token.** Security issues: see the [security policy](https://github.com/grom-exchange/.github/blob/main/SECURITY.md).
